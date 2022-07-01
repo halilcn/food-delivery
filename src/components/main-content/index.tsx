@@ -8,7 +8,8 @@ interface IProps{
 const MainContent : React.FC<IProps> = (props) => {
  return (
   <div className="main-content-container">
-   main content
+   Main Content
+
   </div>
  );
 };

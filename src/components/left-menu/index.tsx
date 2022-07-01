@@ -1,27 +1,24 @@
-import React,{} from 'react';
+import React from 'react'
+import { BiHomeAlt, BiMessageRounded, BiWallet } from 'react-icons/bi'
 
-import style from "./LeftMenu.module.scss"
+import './LeftMenu.scss'
 
-interface IProps{
+interface IProps {}
+
+const LeftMenu: React.FC<IProps> = props => {
+  return (
+    <div className="left-menu-container">
+      <div className="menu-item selected">
+        <BiHomeAlt />
+      </div>
+      <div className="menu-item">
+        <BiMessageRounded />
+      </div>
+      <div className="menu-item">
+        <BiWallet />
+      </div>
+    </div>
+  )
 }
 
-const LeftMenu : React.FC<IProps> = (props) => {
- return (
-  <div className={style.leftMenuContainer}>
-      <div className={style.item}>
-          <i className="fa-solid fa-moon"></i>
-      </div>
-      <div className="item">
-          <i className="fa-solid fa-moon"></i>
-      </div>
-      <div className="item">
-          <i className="fa-solid fa-moon"></i>
-      </div>
-      <div className="item">
-          <i className="fa-solid fa-moon"></i>
-      </div>
-  </div>
- );
-};
-
-export default LeftMenu;
+export default LeftMenu

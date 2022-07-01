@@ -1,4 +1,9 @@
-.main-content-container{
-  background-color: blue;
+@import 'src/styles/variables';
+
+.main-content-container {
+  background-color: $very-light-purple;
   width: 100%;
+  font-size: 25px;
+  font-family: 'Comfortaa', cursive;
+  font-weight: 600;
 }

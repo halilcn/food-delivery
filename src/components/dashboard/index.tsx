@@ -1,18 +1,17 @@
-import React, {} from 'react';
+import React from 'react'
 import './Dashboard.scss'
-import LeftMenu from "../left-menu";
-import MainContent from "../main-content";
+import LeftMenu from '../left-menu'
+import MainContent from '../main-content'
 
-interface IProps {
+interface IProps {}
+
+const Dashboard: React.FC<IProps> = props => {
+  return (
+    <div className="dashboard-container">
+      <LeftMenu />
+      <MainContent />
+    </div>
+  )
 }
 
-const Dashboard: React.FC<IProps> = (props) => {
-    return (
-        <div className="dashboard-container">
-            <LeftMenu/>
-            <MainContent/>
-        </div>
-    );
-};
-
-export default Dashboard;
+export default Dashboard
