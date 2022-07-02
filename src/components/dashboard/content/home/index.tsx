@@ -1,6 +1,7 @@
 import React from 'react'
 
 import './Home.scss'
+import GeneralMenu from './general-menu'
 import MenuCategory from './menu-category'
 
 interface IProps {}
@@ -8,8 +9,10 @@ interface IProps {}
 const Home: React.FC<IProps> = props => {
   return (
     <div className="home-container">
-      home container
-      <MenuCategory />
+      <div className="main-content">
+        <MenuCategory />
+      </div>
+      <GeneralMenu />
     </div>
   )
 }
