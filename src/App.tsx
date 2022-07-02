@@ -1,13 +1,10 @@
-import React from 'react';
-import Dashboard from "./components/dashboard";
+import React from 'react'
 
-import "../src/styles/index.scss"
-
+import '../src/styles/index.scss'
+import Dashboard from './components/dashboard'
 
 function App() {
-    return (
-        <Dashboard/>
-    );
+  return <Dashboard />
 }
 
-export default App;
+export default App

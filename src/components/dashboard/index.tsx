@@ -1,7 +1,8 @@
 import React from 'react'
+
 import './Dashboard.scss'
-import PagesMenu from './pages-menu'
 import Content from './content'
+import PagesMenu from './pages-menu'
 
 interface IProps {}
 
