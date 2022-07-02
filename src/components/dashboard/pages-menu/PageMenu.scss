@@ -1,0 +1,30 @@
+@import '/src/styles/variables';
+@import '/src/styles/mixins';
+
+.pages-menu-container {
+  width: 100px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .menu-item {
+    font-size: 25px;
+    background-color: white;
+    color: #828282;
+    margin: 15px 0;
+    cursor: pointer;
+    padding: 17px 17px 12px 19px; //todo:!
+    border-radius: 100%;
+    transition: .2s;
+
+    &:hover {
+      background-color: #fff8f3;
+    }
+
+    &.selected {
+      color: $normal-orange;
+      background-color: #fff3e5;
+    }
+  }
+}

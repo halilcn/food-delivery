@@ -1,15 +1,15 @@
 import React from 'react'
 import './Dashboard.scss'
-import LeftMenu from '../left-menu'
-import MainContent from '../main-content'
+import PagesMenu from './pages-menu'
+import Content from './content'
 
 interface IProps {}
 
 const Dashboard: React.FC<IProps> = props => {
   return (
     <div className="dashboard-container">
-      <LeftMenu />
-      <MainContent />
+      <PagesMenu />
+      <Content />
     </div>
   )
 }

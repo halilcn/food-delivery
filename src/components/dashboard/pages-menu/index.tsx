@@ -1,13 +1,13 @@
 import React from 'react'
 import { BiHomeAlt, BiMessageRounded, BiWallet } from 'react-icons/bi'
 
-import './LeftMenu.scss'
+import './PageMenu.scss'
 
 interface IProps {}
 
-const LeftMenu: React.FC<IProps> = props => {
+const PagesMenu: React.FC<IProps> = props => {
   return (
-    <div className="left-menu-container">
+    <div className="pages-menu-container">
       <div className="menu-item selected">
         <BiHomeAlt />
       </div>
@@ -21,4 +21,4 @@ const LeftMenu: React.FC<IProps> = props => {
   )
 }
 
-export default LeftMenu
+export default PagesMenu
