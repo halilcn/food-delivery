@@ -1,5 +1,5 @@
-import React from 'react'
-import { ScrollMenu, VisibilityContext } from 'react-horizontal-scrolling-menu'
+import React, { useState } from 'react'
+import { ScrollMenu } from 'react-horizontal-scrolling-menu'
 
 import './MenuCategory.scss'
 import LeftArrow from './left-arrow'
@@ -13,6 +13,9 @@ interface IMenuCategory {
 interface IProps {}
 
 const MenuCategory: React.FC<IProps> = props => {
+  const [selectedCategoryText] = useState<string>('Beef')
+
+  //todo:!
   const MENU_CATEGORY: IMenuCategory[] = [
     {
       image: 'beef-50.png',
@@ -60,9 +63,9 @@ const MenuCategory: React.FC<IProps> = props => {
     <div className="menu-category">
       <div className="menu-category__title">Menu Category</div>
       <div className="menu-category__list-container">
-        <ScrollMenu scrollContainerClassName={'menu-category__list'} LeftArrow={LeftArrow} RightArrow={RightArrow}>
+        <ScrollMenu scrollContainerClassName="menu-category__list" LeftArrow={LeftArrow} RightArrow={RightArrow}>
           {MENU_CATEGORY.map(category => (
-            <div className="menu-category__item menu-category__item--selected">
+            <div className={`menu-category__item ${selectedCategoryText === category.text && 'menu-category__item--selected'}`}>
               <img className="menu-category__icon" src={`/icons/${category.image}`} />
               <div className="menu-category__name">{category.text}</div>
             </div>

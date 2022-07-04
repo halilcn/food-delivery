@@ -5,7 +5,7 @@ import './GeneralMenu.scss'
 interface IProps {}
 
 const GeneralMenu: React.FC<IProps> = props => {
-  return <div className="general-menu-container">genell menu</div>
+  return <div className="general-menu-container">current order</div>
 }
 
 export default GeneralMenu
