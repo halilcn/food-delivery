@@ -8,8 +8,8 @@ interface IProps {}
 
 const Home: React.FC<IProps> = props => {
   return (
-    <div className="home-container">
-      <div className="main-content">
+    <div className="home">
+      <div className="home__main-content">
         <MenuCategory />
       </div>
       <GeneralMenu />

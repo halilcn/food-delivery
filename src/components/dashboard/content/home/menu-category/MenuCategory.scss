@@ -10,10 +10,16 @@
     color: #444444;
   }
 
-  &__list {
-    display: flex;
-    flex-wrap: wrap;
+  &__list-container {
+    width: 100%;
+    position: relative;
     margin-top: 20px;
+  }
+
+  &__list {
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
 
   &__item {
