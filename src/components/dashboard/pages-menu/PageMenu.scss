@@ -1,30 +1,49 @@
 @import '/src/styles/variables';
 @import '/src/styles/mixins';
 
-.pages-menu-container {
+.pages-menu {
   width: 100px;
   background-color: white;
   display: flex;
   flex-direction: column;
-  align-items: center;
 
-  .menu-item {
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__item {
     font-size: 25px;
     background-color: white;
     color: #828282;
     margin: 15px 0;
     cursor: pointer;
-    padding: 17px 17px 12px 19px; //todo:!
-    border-radius: 100%;
     transition: 0.2s;
+    padding: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
 
-    &:hover {
-      background-color: #fff8f3;
+    &:not(&--selected):hover {
+      background-color: #fff7f4;
     }
 
-    &.selected {
+    &--selected {
       color: $normal-orange;
       background-color: #fff3e5;
+    }
+  }
+
+  &__logout {
+    margin-top: auto;
+    margin-bottom: 0;
+    border-radius: 0 5px 0 0;
+
+    &:hover {
+      background-color: #fff2f2 !important;
+      color: #ec3636;
     }
   }
 }
