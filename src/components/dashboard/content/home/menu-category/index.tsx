@@ -13,9 +13,8 @@ interface IMenuCategory {
 interface IProps {}
 
 const MenuCategory: React.FC<IProps> = props => {
-  const [selectedCategoryText] = useState<string>('Beef')
+  const [selectedCategoryText, setSelectedCategoryText] = useState<string>('Beef')
 
-  //todo:!
   const MENU_CATEGORY: IMenuCategory[] = [
     {
       image: 'beef-50.png',
@@ -38,10 +37,6 @@ const MenuCategory: React.FC<IProps> = props => {
       text: 'Hamburger',
     },
     {
-      image: 'ice-cream-cone-50.png',
-      text: 'Ice Cream',
-    },
-    {
       image: 'kebab-50.png',
       text: 'Kebab',
     },
@@ -59,14 +54,21 @@ const MenuCategory: React.FC<IProps> = props => {
     },
   ]
 
+  const changeSelectedCategory = (categoryText: string) => {
+    setSelectedCategoryText(categoryText)
+  }
+
   return (
     <div className="menu-category">
       <div className="menu-category__title">Menu Category</div>
       <div className="menu-category__list-container">
         <ScrollMenu scrollContainerClassName="menu-category__list" LeftArrow={LeftArrow} RightArrow={RightArrow}>
-          {MENU_CATEGORY.map(category => (
-            <div className={`menu-category__item ${selectedCategoryText === category.text && 'menu-category__item--selected'}`}>
-              <img className="menu-category__icon" src={`/icons/${category.image}`} />
+          {MENU_CATEGORY.map((category, key) => (
+            <div
+              key={key}
+              onClick={() => changeSelectedCategory(category.text)}
+              className={`menu-category__item ${selectedCategoryText === category.text && 'menu-category__item--selected'}`}>
+              <img className="menu-category__icon" src={`/icons/${category.image}`} alt="menu-image" />
               <div className="menu-category__name">{category.text}</div>
             </div>
           ))}

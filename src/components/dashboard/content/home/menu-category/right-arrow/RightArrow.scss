@@ -4,12 +4,19 @@
   position: absolute;
   right: -30px;
   height: 100%;
-  width: 70px;
+  width: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: $very-light-purple;
+  background: rgb(250, 249, 251);
+  background: linear-gradient(
+    90deg,
+    rgba(250, 249, 251, 0) 0%,
+    rgba(250, 249, 251, 0.7679665616246498) 15%,
+    rgba(250, 249, 251, 1) 51%
+  );
   cursor: pointer;
   color: $normal-orange;
   z-index: 1;
+  font-size: 30px;
 }

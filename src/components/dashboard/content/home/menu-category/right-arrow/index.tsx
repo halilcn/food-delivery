@@ -13,7 +13,7 @@ const LeftArrow: React.FC<IProps> = props => {
     <div />
   ) : (
     <div className="right-arrow" onClick={() => scrollNext()}>
-      {<FaAngleRight />}
+      <FaAngleRight />
     </div>
   )
 }
