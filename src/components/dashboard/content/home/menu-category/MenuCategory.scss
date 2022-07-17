@@ -4,16 +4,21 @@
 .menu-category {
   margin-top: 30px;
 
+  &__top {
+    display: flex;
+    align-items: center;
+  }
+
   &__title {
     font-weight: 700;
-    font-size: 20px;
+    font-size: 23px;
     color: #444444;
   }
 
   &__list-container {
     width: 100%;
     position: relative;
-    margin-top: 20px;
+    margin-top: 35px;
   }
 
   &__list {

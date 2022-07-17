@@ -1,0 +1,33 @@
+.search {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  position: relative;
+
+  &__input-text {
+    padding: 17px 40px 17px 17px;
+    width: 350px;
+    border: 1px solid white; //#f3f3f3;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 300;
+    color: #5e5e5e;
+    transition: 0.2s;
+
+    &::placeholder {
+      color: #bbbbbb;
+      font-weight: 300;
+    }
+
+    &:focus {
+      border-color: #ffdeb5;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    font-size: 17px;
+    right: 15px;
+    color: #bbbbbb;
+  }
+}

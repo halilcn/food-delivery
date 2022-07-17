@@ -4,6 +4,7 @@ import { ScrollMenu } from 'react-horizontal-scrolling-menu'
 import './MenuCategory.scss'
 import LeftArrow from './left-arrow'
 import RightArrow from './right-arrow'
+import Search from './search'
 
 interface IMenuCategory {
   image: string
@@ -60,7 +61,10 @@ const MenuCategory: React.FC<IProps> = props => {
 
   return (
     <div className="menu-category">
-      <div className="menu-category__title">Menu Category</div>
+      <div className="menu-category__top">
+        <div className="menu-category__title">Menu Category</div>
+        <Search />
+      </div>
       <div className="menu-category__list-container">
         <ScrollMenu scrollContainerClassName="menu-category__list" LeftArrow={LeftArrow} RightArrow={RightArrow}>
           {MENU_CATEGORY.map((category, key) => (
