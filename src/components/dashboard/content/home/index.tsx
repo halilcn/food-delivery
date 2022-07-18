@@ -1,7 +1,6 @@
 import React from 'react'
 
 import './Home.scss'
-import GeneralMenu from './general-menu'
 import MenuCategory from './menu-category'
 import MenuList from './menu-list'
 
@@ -14,7 +13,6 @@ const Home: React.FC<IProps> = props => {
         <MenuCategory />
         <MenuList />
       </div>
-      <GeneralMenu />
     </div>
   )
 }

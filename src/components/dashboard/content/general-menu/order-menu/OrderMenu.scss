@@ -1,0 +1,39 @@
+.order-menu {
+  &__title {
+    font-weight: 700;
+    font-size: 23px;
+  }
+
+  &__list {
+    //  background-color: red;
+    //todo:auto scroll
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+
+    &:last-child {
+      border-bottom: 1px solid #e3e3e3;
+      padding-bottom: 30px;
+    }
+  }
+
+  &__item-image {
+    width: 90px;
+  }
+
+  &__item-piece {
+    font-size: 15px;
+  }
+
+  &__item-name {
+    font-size: 15px;
+  }
+
+  &__item-amount {
+    font-size: 15px;
+    margin-left: auto;
+    font-weight: 600;
+  }
+}
