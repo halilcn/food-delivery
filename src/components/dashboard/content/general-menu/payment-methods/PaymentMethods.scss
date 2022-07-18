@@ -1,0 +1,36 @@
+.payment-methods {
+  margin-top: 50px;
+
+  &__title {
+    font-weight: 600;
+    font-size: 20px;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    width: 30%;
+    background-color: #f6f6f6;
+    color: #424242;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+  &__item-icon {
+    font-size: 27px;
+  }
+
+  &__item-text {
+    font-size: 11px;
+    margin-top: 7px;
+    font-weight: 700;
+  }
+}

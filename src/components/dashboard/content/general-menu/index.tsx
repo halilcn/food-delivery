@@ -2,7 +2,9 @@ import React from 'react'
 
 import './GeneralMenu.scss'
 import EmptyBasket from './empty-basket'
+import OrderContinueButton from './order-continue-button'
 import OrderMenu from './order-menu'
+import PaymentMethods from './payment-methods'
 import TotalAmount from './total-amount'
 
 interface IProps {}
@@ -13,6 +15,8 @@ const GeneralMenu: React.FC<IProps> = props => {
       <div>
         <OrderMenu />
         <TotalAmount />
+        <PaymentMethods />
+        <OrderContinueButton />
       </div>
     </div>
   )

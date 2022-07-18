@@ -1,0 +1,18 @@
+@import 'src/styles/variables';
+
+.order-continue-button {
+  margin-top: 40px;
+  background-color: $normal-orange;
+  color: white;
+  font-size: 14px;
+  padding: 14px 0;
+  text-align: center;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+  font-weight: 700;
+
+  &:hover {
+    background-color: #ffa626;
+  }
+}
