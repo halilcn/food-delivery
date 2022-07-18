@@ -1,5 +1,5 @@
 import React from 'react'
-import { BsCash, BsCreditCard2BackFill } from 'react-icons/bs'
+import { BsCash, BsCreditCard2BackFill, BsFillCreditCard2FrontFill } from 'react-icons/bs'
 
 import './PaymentMethods.scss'
 
@@ -19,7 +19,7 @@ const PaymentMethods: React.FC<IProps> = props => {
           <span className="payment-methods__item-text">Debit Card</span>
         </div>
         <div className="payment-methods__item">
-          <BsCash className="payment-methods__item-icon" />
+          <BsFillCreditCard2FrontFill className="payment-methods__item-icon" />
           <span className="payment-methods__item-text">Food Card</span>
         </div>
       </div>
