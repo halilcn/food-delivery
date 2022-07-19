@@ -11,8 +11,15 @@
   cursor: pointer;
   transition: 0.2s;
   font-weight: 700;
+  border: 0;
 
   &:hover {
     background-color: #ffa626;
+  }
+
+  &--disable {
+    pointer-events: none;
+    background-color: #e8e8e8;
+    color: #b8b8b8;
   }
 }

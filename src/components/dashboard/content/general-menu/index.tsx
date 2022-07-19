@@ -1,5 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { useSelector } from 'react-redux'
 
+import { RootState } from '../../../../store'
 import './GeneralMenu.scss'
 import EmptyBasket from './empty-basket'
 import OrderContinueButton from './order-all-steps-shared/order-continue-button'
@@ -13,23 +15,48 @@ import OrderAddress from './order-last-step/order-address'
 interface IProps {}
 
 /*
-*  <div className="general-menu__order-menu-first-step">
-        <OrderMenu />
-        <TotalAmount />
-        <PaymentMethods />
-        <OrderContinueButton text="Continue to Payment"/>
-      </div>*/
-
-const GeneralMenu: React.FC<IProps> = props => {
-  return (
-    <div className="general-menu">
-      <div className="general-menu__order-menu-last-step">
+   <div className="general-menu__order-menu-last-step">
         <BackFirstStep />
         <TotalAmount />
         <OrderAddress />
         <CreditCard />
         <OrderContinueButton text="Pay" />
       </div>
+* */
+
+const GeneralMenu: React.FC<IProps> = props => {
+  const [isLastStep, setIsLastStep] = useState<boolean>(false)
+
+  const basketState = useSelector((state: RootState) => state.basket)
+
+  const toggleLastStep = () => {
+    setIsLastStep(!isLastStep)
+  }
+
+  return (
+    <div className="general-menu">
+      {!basketState.orders.length && <EmptyBasket />}
+      {!!basketState.orders.length && !isLastStep && (
+        <div className="general-menu__order-menu-first-step">
+          <OrderMenu />
+          <TotalAmount />
+          <PaymentMethods />
+          <OrderContinueButton
+            disable={basketState.paymentMethods === null}
+            onClick={toggleLastStep}
+            text="Continue to Payment"
+          />
+        </div>
+      )}
+      {!!basketState.orders.length && isLastStep && (
+        <div className="general-menu__order-menu-last-step">
+          <BackFirstStep onClick={toggleLastStep} />
+          <TotalAmount />
+          <OrderAddress />
+          <CreditCard />
+          <OrderContinueButton text="Pay" />
+        </div>
+      )}
     </div>
   )
 }

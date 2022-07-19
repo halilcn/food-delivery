@@ -3,14 +3,14 @@ import { IoIosArrowBack } from 'react-icons/io'
 
 import './BackFirstStep.scss'
 
-interface IProps {}
+interface IProps extends React.ComponentProps<'button'> {}
 
 const BackFirstStep: React.FC<IProps> = props => {
   return (
-    <div className="back-first-step">
+    <button {...props} className="back-first-step">
       <IoIosArrowBack className="back-first-step__icon" />
       back
-    </div>
+    </button>
   )
 }
 
