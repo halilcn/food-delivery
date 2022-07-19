@@ -2,8 +2,8 @@ import React from 'react'
 import { HiMinusSm, HiOutlinePlusSm } from 'react-icons/hi'
 import { useDispatch, useSelector } from 'react-redux'
 
-import { RootState } from '../../../../../store'
-import { basketReduceAction } from '../../../../../store/reducers/basket'
+import { RootState } from '../../../../../../store'
+import { basketReduceAction } from '../../../../../../store/reducers/basket'
 import './OrderMenu.scss'
 
 interface IProps {}

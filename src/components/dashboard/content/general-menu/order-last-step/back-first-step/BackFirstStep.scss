@@ -1,0 +1,12 @@
+.back-first-step {
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  cursor: pointer;
+  color: #393939;
+
+  &__icon {
+    margin-right: 10px;
+  }
+}

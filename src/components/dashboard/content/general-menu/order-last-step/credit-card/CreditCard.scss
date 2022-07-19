@@ -1,0 +1,35 @@
+@import 'src/styles/mixins';
+
+.credit-card {
+  margin-top: 45px;
+
+  &__title {
+    font-weight: 600;
+    font-size: 20px;
+  }
+
+  &__input {
+    width: 100%;
+    padding: 5px;
+  }
+
+  &__stored {
+    @include center-lg-box-shadow;
+    display: flex;
+    align-items: center;
+    padding: 5px 7px;
+    border-radius: 7px;
+    margin-top: 15px;
+  }
+
+  &__stored-icon {
+    width: 50px;
+  }
+
+  &__stored-number {
+    font-size: 15px;
+    margin-left: 20px;
+    font-weight: 300;
+    color: #474747;
+  }
+}

@@ -1,0 +1,27 @@
+@import 'src/styles/variables';
+
+.order-address {
+  margin-top: 45px;
+
+  &__title {
+    font-weight: 600;
+    font-size: 20px;
+  }
+
+  &__selected-address {
+    margin-top: 13px;
+    display: flex;
+    align-items: center;
+    font-weight: 300;
+    color: $normal-orange;
+  }
+
+  &__selected-address__icon {
+    font-size: 22px;
+  }
+
+  &__selected-address__text {
+    font-size: 16px;
+    margin-left: 10px;
+  }
+}
