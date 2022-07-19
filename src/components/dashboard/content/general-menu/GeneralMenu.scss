@@ -3,4 +3,11 @@
   background-color: #ffffff;
   height: 100%;
   padding: 30px;
+  position: sticky;
+
+  &__order-menu-first-step {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
 }

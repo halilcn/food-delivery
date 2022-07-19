@@ -10,7 +10,7 @@ const PaymentMethods: React.FC<IProps> = props => {
     <div className="payment-methods">
       <div className="payment-methods__title">Payment Methods</div>
       <div className="payment-methods__list">
-        <div className="payment-methods__item">
+        <div className="payment-methods__item payment-methods__item--selected">
           <BsCash className="payment-methods__item-icon" />
           <span className="payment-methods__item-text">Cash</span>
         </div>

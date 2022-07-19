@@ -1,12 +1,16 @@
 .total-amount {
-  padding-top: 30px;
+  margin-top: 25px;
+  padding-top: 25px;
   display: flex;
+  align-items: center;
   font-size: 14px;
   font-weight: 300;
   color: #585858;
+  border-top: 1px solid #e8e8e8;
 }
 
 .total-amount__number {
   margin-left: auto;
   font-weight: 700;
+  font-size: 17px;
 }

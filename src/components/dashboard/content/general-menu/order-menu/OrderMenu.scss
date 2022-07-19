@@ -1,22 +1,33 @@
+@import 'src/styles/variables';
+
 .order-menu {
+  overflow-y: auto;
+
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 10px;
+  }
+
   &__title {
     font-weight: 600;
     font-size: 20px;
   }
 
   &__list {
-    //  background-color: red;
-    //todo:auto scroll
+    margin-top: 20px;
   }
 
   &__item {
     display: flex;
     align-items: center;
-
-    &:last-child {
-      border-bottom: 1px solid #e3e3e3;
-      padding-bottom: 30px;
-    }
   }
 
   &__item-image {
@@ -24,16 +35,39 @@
   }
 
   &__item-piece {
+    display: flex;
+    align-items: center;
+    width: 68px;
+    margin-left: 5px;
+  }
+  &__item-piece-number {
     font-size: 15px;
+    margin: 0 4px;
+    color: #4e4e4e;
+  }
+
+  &__item-piece-icon {
+    font-size: 18px;
+    cursor: pointer;
+    color: $normal-orange;
   }
 
   &__item-name {
     font-size: 15px;
+    font-weight: 400;
+    color: #575757;
   }
 
   &__item-amount {
-    font-size: 15px;
+    font-size: 16px;
     margin-left: auto;
     font-weight: 600;
+    color: #232323;
+  }
+
+  &__item-amount__dollar-icon {
+    color: $normal-orange;
+    margin-right: 4px;
+    font-size: 13px;
   }
 }

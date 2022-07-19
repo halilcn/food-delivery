@@ -12,7 +12,7 @@ interface IProps {}
 const GeneralMenu: React.FC<IProps> = props => {
   return (
     <div className="general-menu">
-      <div>
+      <div className="general-menu__order-menu-first-step">
         <OrderMenu />
         <TotalAmount />
         <PaymentMethods />
