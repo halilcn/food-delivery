@@ -60,7 +60,7 @@ const MenuCategory: React.FC<IProps> = props => {
   }
 
   return (
-    <div className="menu-category">
+    <>
       <div className="menu-category__top">
         <div className="menu-category__title">Menu Category</div>
         <Search />
@@ -78,7 +78,7 @@ const MenuCategory: React.FC<IProps> = props => {
           ))}
         </ScrollMenu>
       </div>
-    </div>
+    </>
   )
 }
 

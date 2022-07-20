@@ -11,6 +11,7 @@ const Home: React.FC<IProps> = props => {
     <div className="home">
       <div className="home__main-content">
         <MenuCategory />
+        <div className="home__main-content__line" />
         <MenuList />
       </div>
     </div>

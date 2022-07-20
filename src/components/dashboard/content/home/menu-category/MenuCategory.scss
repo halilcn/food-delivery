@@ -2,8 +2,6 @@
 @import '/src/styles/mixins';
 
 .menu-category {
-  margin-top: 30px;
-
   &__top {
     display: flex;
     align-items: center;
@@ -17,12 +15,17 @@
 
   &__list-container {
     width: 100%;
-    position: relative;
-    margin-top: 35px;
+    margin-top: 15px;
+    position: sticky;
+    top: 0;
+    z-index: 99;
   }
 
   &__list {
+    background-color: $very-light-purple;
     display: flex;
+    padding: 20px 0;
+
     &::-webkit-scrollbar {
       display: none;
     }

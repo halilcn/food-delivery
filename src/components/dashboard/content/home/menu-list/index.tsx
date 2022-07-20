@@ -25,6 +25,231 @@ const MenuList: React.FC<IProps> = props => {
           </div>
         </div>
       </div>
+      <div className="menu-list__item">
+        <img className="menu-list__food-image" src="/food/pizza/mixed-vegetables.webp" />
+        <div className="menu-list__bottom-content">
+          <div className="menu-list__food-name">Pizza</div>
+          <div className="menu-list__food-description">Test asdas ds adask daskd asd asjd asjd ksajd kass</div>
+          <div className="menu-list__amount">$12</div>
+        </div>
+        <div className="menu-list__basket-actions">
+          <div className="menu-list__basket-piece-action">
+            <HiMinusSm className="menu-list__basket-piece-action__icon" />
+            <span className="menu-list__basket-piece-action__number">1</span>
+            <HiOutlinePlusSm className="menu-list__basket-piece-action__icon" />
+          </div>
+        </div>
+      </div>
+      <div className="menu-list__item">
+        <img className="menu-list__food-image" src="/food/pizza/mixed-vegetables.webp" />
+        <div className="menu-list__bottom-content">
+          <div className="menu-list__food-name">Pizza</div>
+          <div className="menu-list__food-description">Test asdas ds adask daskd asd asjd asjd ksajd kass</div>
+          <div className="menu-list__amount">$12</div>
+        </div>
+        <div className="menu-list__basket-actions">
+          <div className="menu-list__basket-piece-action">
+            <HiMinusSm className="menu-list__basket-piece-action__icon" />
+            <span className="menu-list__basket-piece-action__number">1</span>
+            <HiOutlinePlusSm className="menu-list__basket-piece-action__icon" />
+          </div>
+        </div>
+      </div>
+      <div className="menu-list__item">
+        <img className="menu-list__food-image" src="/food/pizza/mixed-vegetables.webp" />
+        <div className="menu-list__bottom-content">
+          <div className="menu-list__food-name">Pizza</div>
+          <div className="menu-list__food-description">Test asdas ds adask daskd asd asjd asjd ksajd kass</div>
+          <div className="menu-list__amount">$12</div>
+        </div>
+        <div className="menu-list__basket-actions">
+          <div className="menu-list__basket-piece-action">
+            <HiMinusSm className="menu-list__basket-piece-action__icon" />
+            <span className="menu-list__basket-piece-action__number">1</span>
+            <HiOutlinePlusSm className="menu-list__basket-piece-action__icon" />
+          </div>
+        </div>
+      </div>
+      <div className="menu-list__item">
+        <img className="menu-list__food-image" src="/food/pizza/mixed-vegetables.webp" />
+        <div className="menu-list__bottom-content">
+          <div className="menu-list__food-name">Pizza</div>
+          <div className="menu-list__food-description">Test asdas ds adask daskd asd asjd asjd ksajd kass</div>
+          <div className="menu-list__amount">$12</div>
+        </div>
+        <div className="menu-list__basket-actions">
+          <div className="menu-list__basket-piece-action">
+            <HiMinusSm className="menu-list__basket-piece-action__icon" />
+            <span className="menu-list__basket-piece-action__number">1</span>
+            <HiOutlinePlusSm className="menu-list__basket-piece-action__icon" />
+          </div>
+        </div>
+      </div>
+      <div className="menu-list__item">
+        <img className="menu-list__food-image" src="/food/pizza/mixed-vegetables.webp" />
+        <div className="menu-list__bottom-content">
+          <div className="menu-list__food-name">Pizza</div>
+          <div className="menu-list__food-description">Test asdas ds adask daskd asd asjd asjd ksajd kass</div>
+          <div className="menu-list__amount">$12</div>
+        </div>
+        <div className="menu-list__basket-actions">
+          <div className="menu-list__basket-piece-action">
+            <HiMinusSm className="menu-list__basket-piece-action__icon" />
+            <span className="menu-list__basket-piece-action__number">1</span>
+            <HiOutlinePlusSm className="menu-list__basket-piece-action__icon" />
+          </div>
+        </div>
+      </div>
+      <div className="menu-list__item">
+        <img className="menu-list__food-image" src="/food/pizza/mixed-vegetables.webp" />
+        <div className="menu-list__bottom-content">
+          <div className="menu-list__food-name">Pizza</div>
+          <div className="menu-list__food-description">Test asdas ds adask daskd asd asjd asjd ksajd kass</div>
+          <div className="menu-list__amount">$12</div>
+        </div>
+        <div className="menu-list__basket-actions">
+          <div className="menu-list__basket-piece-action">
+            <HiMinusSm className="menu-list__basket-piece-action__icon" />
+            <span className="menu-list__basket-piece-action__number">1</span>
+            <HiOutlinePlusSm className="menu-list__basket-piece-action__icon" />
+          </div>
+        </div>
+      </div>
+      <div className="menu-list__item">
+        <img className="menu-list__food-image" src="/food/pizza/mixed-vegetables.webp" />
+        <div className="menu-list__bottom-content">
+          <div className="menu-list__food-name">Pizza</div>
+          <div className="menu-list__food-description">Test asdas ds adask daskd asd asjd asjd ksajd kass</div>
+          <div className="menu-list__amount">$12</div>
+        </div>
+        <div className="menu-list__basket-actions">
+          <div className="menu-list__basket-piece-action">
+            <HiMinusSm className="menu-list__basket-piece-action__icon" />
+            <span className="menu-list__basket-piece-action__number">1</span>
+            <HiOutlinePlusSm className="menu-list__basket-piece-action__icon" />
+          </div>
+        </div>
+      </div>
+      <div className="menu-list__item">
+        <img className="menu-list__food-image" src="/food/pizza/mixed-vegetables.webp" />
+        <div className="menu-list__bottom-content">
+          <div className="menu-list__food-name">Pizza</div>
+          <div className="menu-list__food-description">Test asdas ds adask daskd asd asjd asjd ksajd kass</div>
+          <div className="menu-list__amount">$12</div>
+        </div>
+        <div className="menu-list__basket-actions">
+          <div className="menu-list__basket-piece-action">
+            <HiMinusSm className="menu-list__basket-piece-action__icon" />
+            <span className="menu-list__basket-piece-action__number">1</span>
+            <HiOutlinePlusSm className="menu-list__basket-piece-action__icon" />
+          </div>
+        </div>
+      </div>
+      <div className="menu-list__item">
+        <img className="menu-list__food-image" src="/food/pizza/mixed-vegetables.webp" />
+        <div className="menu-list__bottom-content">
+          <div className="menu-list__food-name">Pizza</div>
+          <div className="menu-list__food-description">Test asdas ds adask daskd asd asjd asjd ksajd kass</div>
+          <div className="menu-list__amount">$12</div>
+        </div>
+        <div className="menu-list__basket-actions">
+          <div className="menu-list__basket-piece-action">
+            <HiMinusSm className="menu-list__basket-piece-action__icon" />
+            <span className="menu-list__basket-piece-action__number">1</span>
+            <HiOutlinePlusSm className="menu-list__basket-piece-action__icon" />
+          </div>
+        </div>
+      </div>
+      <div className="menu-list__item">
+        <img className="menu-list__food-image" src="/food/pizza/mixed-vegetables.webp" />
+        <div className="menu-list__bottom-content">
+          <div className="menu-list__food-name">Pizza</div>
+          <div className="menu-list__food-description">Test asdas ds adask daskd asd asjd asjd ksajd kass</div>
+          <div className="menu-list__amount">$12</div>
+        </div>
+        <div className="menu-list__basket-actions">
+          <div className="menu-list__basket-piece-action">
+            <HiMinusSm className="menu-list__basket-piece-action__icon" />
+            <span className="menu-list__basket-piece-action__number">1</span>
+            <HiOutlinePlusSm className="menu-list__basket-piece-action__icon" />
+          </div>
+        </div>
+      </div>
+      <div className="menu-list__item">
+        <img className="menu-list__food-image" src="/food/pizza/mixed-vegetables.webp" />
+        <div className="menu-list__bottom-content">
+          <div className="menu-list__food-name">Pizza</div>
+          <div className="menu-list__food-description">Test asdas ds adask daskd asd asjd asjd ksajd kass</div>
+          <div className="menu-list__amount">$12</div>
+        </div>
+        <div className="menu-list__basket-actions">
+          <div className="menu-list__basket-piece-action">
+            <HiMinusSm className="menu-list__basket-piece-action__icon" />
+            <span className="menu-list__basket-piece-action__number">1</span>
+            <HiOutlinePlusSm className="menu-list__basket-piece-action__icon" />
+          </div>
+        </div>
+      </div>
+      <div className="menu-list__item">
+        <img className="menu-list__food-image" src="/food/pizza/mixed-vegetables.webp" />
+        <div className="menu-list__bottom-content">
+          <div className="menu-list__food-name">Pizza</div>
+          <div className="menu-list__food-description">Test asdas ds adask daskd asd asjd asjd ksajd kass</div>
+          <div className="menu-list__amount">$12</div>
+        </div>
+        <div className="menu-list__basket-actions">
+          <div className="menu-list__basket-piece-action">
+            <HiMinusSm className="menu-list__basket-piece-action__icon" />
+            <span className="menu-list__basket-piece-action__number">1</span>
+            <HiOutlinePlusSm className="menu-list__basket-piece-action__icon" />
+          </div>
+        </div>
+      </div>
+      <div className="menu-list__item">
+        <img className="menu-list__food-image" src="/food/pizza/mixed-vegetables.webp" />
+        <div className="menu-list__bottom-content">
+          <div className="menu-list__food-name">Pizza</div>
+          <div className="menu-list__food-description">Test asdas ds adask daskd asd asjd asjd ksajd kass</div>
+          <div className="menu-list__amount">$12</div>
+        </div>
+        <div className="menu-list__basket-actions">
+          <div className="menu-list__basket-piece-action">
+            <HiMinusSm className="menu-list__basket-piece-action__icon" />
+            <span className="menu-list__basket-piece-action__number">1</span>
+            <HiOutlinePlusSm className="menu-list__basket-piece-action__icon" />
+          </div>
+        </div>
+      </div>
+      <div className="menu-list__item">
+        <img className="menu-list__food-image" src="/food/pizza/mixed-vegetables.webp" />
+        <div className="menu-list__bottom-content">
+          <div className="menu-list__food-name">Pizza</div>
+          <div className="menu-list__food-description">Test asdas ds adask daskd asd asjd asjd ksajd kass</div>
+          <div className="menu-list__amount">$12</div>
+        </div>
+        <div className="menu-list__basket-actions">
+          <div className="menu-list__basket-piece-action">
+            <HiMinusSm className="menu-list__basket-piece-action__icon" />
+            <span className="menu-list__basket-piece-action__number">1</span>
+            <HiOutlinePlusSm className="menu-list__basket-piece-action__icon" />
+          </div>
+        </div>
+      </div>
+      <div className="menu-list__item">
+        <img className="menu-list__food-image" src="/food/pizza/mixed-vegetables.webp" />
+        <div className="menu-list__bottom-content">
+          <div className="menu-list__food-name">Pizza</div>
+          <div className="menu-list__food-description">Test asdas ds adask daskd asd asjd asjd ksajd kass</div>
+          <div className="menu-list__amount">$12</div>
+        </div>
+        <div className="menu-list__basket-actions">
+          <div className="menu-list__basket-piece-action">
+            <HiMinusSm className="menu-list__basket-piece-action__icon" />
+            <span className="menu-list__basket-piece-action__number">1</span>
+            <HiOutlinePlusSm className="menu-list__basket-piece-action__icon" />
+          </div>
+        </div>
+      </div>
     </div>
   )
 }

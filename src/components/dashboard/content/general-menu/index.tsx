@@ -14,16 +14,6 @@ import OrderAddress from './order-last-step/order-address'
 
 interface IProps {}
 
-/*
-   <div className="general-menu__order-menu-last-step">
-        <BackFirstStep />
-        <TotalAmount />
-        <OrderAddress />
-        <CreditCard />
-        <OrderContinueButton text="Pay" />
-      </div>
-* */
-
 const GeneralMenu: React.FC<IProps> = props => {
   const [isLastStep, setIsLastStep] = useState<boolean>(false)
 
