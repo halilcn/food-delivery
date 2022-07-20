@@ -3,8 +3,7 @@ import { BsCash, BsCreditCard2BackFill, BsFillCreditCard2FrontFill } from 'react
 import { useDispatch, useSelector } from 'react-redux'
 
 import { RootState } from '../../../../../../store'
-import { IPaymentMethod } from '../../../../../../store/reducers/basket'
-import { basketReduceActions } from '../../../../../../store/reducers/basket'
+import { IPaymentMethod, basketReduceActions } from '../../../../../../store/reducers/basket'
 import './PaymentMethods.scss'
 
 interface IProps {}
@@ -17,6 +16,10 @@ const PaymentMethods: React.FC<IProps> = props => {
     dispatch(basketReduceActions.setPaymentMethod(paymentMethod))
   }
 
+  const dynamicSelectedClass = (paymentMethod: IPaymentMethod) => {
+    if (basketState.paymentMethods === paymentMethod) return 'payment-methods__item--selected'
+  }
+
   //todo:dynamic class için tek fonkstiyon ?
 
   return (
@@ -24,25 +27,19 @@ const PaymentMethods: React.FC<IProps> = props => {
       <div className="payment-methods__title">Payment Methods</div>
       <div className="payment-methods__list">
         <div
-          className={`payment-methods__item  ${
-            basketState.paymentMethods === IPaymentMethod.CASH && 'payment-methods__item--selected'
-          }`}
+          className={`payment-methods__item  ${dynamicSelectedClass(IPaymentMethod.CASH)}`}
           onClick={() => selectPaymentMethod(IPaymentMethod.CASH)}>
           <BsCash className="payment-methods__item-icon" />
           <span className="payment-methods__item-text">Cash</span>
         </div>
         <div
-          className={`payment-methods__item  ${
-            basketState.paymentMethods === IPaymentMethod.CREDIT_CARD && 'payment-methods__item--selected'
-          }`}
+          className={`payment-methods__item  ${dynamicSelectedClass(IPaymentMethod.CREDIT_CARD)}`}
           onClick={() => selectPaymentMethod(IPaymentMethod.CREDIT_CARD)}>
           <BsCreditCard2BackFill className="payment-methods__item-icon" />
           <span className="payment-methods__item-text">Debit Card</span>
         </div>
         <div
-          className={`payment-methods__item  ${
-            basketState.paymentMethods === IPaymentMethod.FOOD_CARD && 'payment-methods__item--selected'
-          }`}
+          className={`payment-methods__item  ${dynamicSelectedClass(IPaymentMethod.FOOD_CARD)}`}
           onClick={() => selectPaymentMethod(IPaymentMethod.FOOD_CARD)}>
           <BsFillCreditCard2FrontFill className="payment-methods__item-icon" />
           <span className="payment-methods__item-text">Food Card</span>

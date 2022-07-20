@@ -1,0 +1,98 @@
+@import 'src/styles/variables';
+@import 'src/styles/mixins';
+
+.menu-list {
+  display: flex;
+  margin-top: 50px;
+
+  &__item {
+    position: relative;
+    width: 250px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__food-image {
+    width: 140px;
+    align-self: center;
+  }
+
+  &__bottom-content {
+    padding: 0 10px;
+  }
+
+  &__food-name {
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  &__food-description {
+    font-size: 12px;
+    font-weight: 300;
+    color: #525252;
+    margin-top: 7px;
+  }
+
+  &__amount {
+    font-size: 18px;
+    font-weight: 700;
+    margin-top: 18px;
+    color: $normal-orange;
+  }
+
+  &__basket-actions {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 12px;
+  }
+
+  /*&__amount__dollar-icon {
+    color: $normal-orange;
+    margin-right: 4px;
+    font-size: 13px;
+  }*/
+
+  &__basket-first-add {
+    @include center-lg-box-shadow;
+    padding: 5px;
+    font-size: 35px;
+    background-color: white;
+    border-radius: 10px;
+    color: $normal-orange;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #fff8f3;
+    }
+  }
+
+  &__basket-piece-action {
+    @include center-lg-box-shadow;
+    display: flex;
+    background-color: white;
+    border-radius: 10px;
+  }
+
+  &__basket-piece-action__icon {
+    color: #5c5c5c;
+    cursor: pointer;
+    font-size: 21px;
+
+    &:hover {
+      background-color: #f3f3f3;
+    }
+  }
+
+  &__basket-piece-action__number {
+    display: flex;
+    align-items: center;
+    background-color: $normal-orange;
+    color: white;
+    font-size: 12px;
+    padding: 0 8px;
+  }
+}
