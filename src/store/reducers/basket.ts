@@ -26,10 +26,7 @@ export interface IBasketState {
 }
 
 const initialState: IBasketState = {
-  orders: [
-    { id: 'test', name: 'Pizza', image: '/food/pizza/various.webp', piece: 2, amount: 14 },
-    { id: 'test', name: 'Tadım Pizza', image: '/food/pizza/various.webp', piece: 5, amount: 4 },
-  ],
+  orders: [],
   paymentMethods: null,
 }
 
@@ -40,21 +37,18 @@ export const basketSlice = createSlice({
     addOrder: (state, action: PayloadAction<IOrder>) => {
       state.orders.push(action.payload)
     },
-    increasePieceOfOrder: (state, action: PayloadAction<IPieceAction>) => {
+    updatePieceOfOrder: (state, action: PayloadAction<IPieceAction>) => {
       const order = state.orders.find(order => order.id === action.payload.id)
-      if (order) order.piece += action.payload.piece
-    },
-    reducePieceOfOrder: (state, action: PayloadAction<IPieceAction>) => {
-      const order = state.orders.find(order => order.id === action.payload.id)
+      const piece = action.payload.piece
 
       if (!order) return
 
-      if (order.piece !== 1) {
-        order.piece -= action.payload.piece
+      if (piece < 0 && order.piece === 1) {
+        state.orders = state.orders.filter(order => order.id !== action.payload.id)
         return
       }
 
-      state.orders = state.orders.filter(order => order.id !== action.payload.id)
+      order.piece += piece
     },
     setPaymentMethod: (state, action: PayloadAction<IPaymentMethod>) => {
       state.paymentMethods = action.payload

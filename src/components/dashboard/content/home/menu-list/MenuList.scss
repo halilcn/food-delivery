@@ -4,11 +4,11 @@
 .menu-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
 
   &__item {
     position: relative;
-    width: 250px;
+    width: calc(25% - 30px);
+    margin: 0 15px 30px;
     padding: 13px;
     background-color: white;
     border-radius: 10px;
@@ -16,7 +16,6 @@
     flex-direction: column;
     border: 1px solid transparent;
     transition: 0.2s;
-    margin-bottom: 20px;
 
     &:hover {
       border-color: #ffedd6;

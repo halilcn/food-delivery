@@ -21,12 +21,12 @@ const OrderMenu: React.FC<IProps> = props => {
             <img className="order-menu__item-image" src={order.image} />
             <div className="order-menu__item-piece">
               <HiMinusSm
-                onClick={() => dispatch(basketReduceActions.reducePieceOfOrder({ id: order.id, piece: 1 }))}
+                onClick={() => dispatch(basketReduceActions.updatePieceOfOrder({ id: order.id, piece: -1 }))}
                 className="order-menu__item-piece-icon"
               />
               <span className="order-menu__item-piece-number">{order.piece}</span>
               <HiOutlinePlusSm
-                onClick={() => dispatch(basketReduceActions.increasePieceOfOrder({ id: order.id, piece: 1 }))}
+                onClick={() => dispatch(basketReduceActions.updatePieceOfOrder({ id: order.id, piece: 1 }))}
                 className="order-menu__item-piece-icon"
               />
             </div>

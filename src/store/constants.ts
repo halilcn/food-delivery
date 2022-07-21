@@ -1,0 +1,44 @@
+export const MENU_LIST = [
+  {
+    id: 'mixed-vegetables',
+    name: 'Vegetable Pizza',
+    description: 'Lorem ipsum dolor',
+    image: '/food/pizza/mixed-vegetables.webp',
+    amount: 10,
+  },
+  {
+    id: 'a-lot-of-material',
+    name: 'Bol Malzemeli Pizza',
+    description: 'Lorem ipsum dolor',
+    image: '/food/pizza/a-lot-of-material.webp',
+    amount: 20,
+  },
+  {
+    id: 'crispy-edge',
+    name: 'Crispy Edge Pizza',
+    description: 'Lorem ipsum dolor',
+    image: '/food/pizza/crispy-edge.webp',
+    amount: 15,
+  },
+  {
+    id: 'mixed-olives',
+    name: 'Olives Pizza',
+    description: 'Lorem ipsum dolor',
+    image: '/food/pizza/mixed-olives.jpeg',
+    amount: 16.5,
+  },
+  {
+    id: 'sausage',
+    name: 'Sausage Pizza',
+    description: 'Lorem ipsum dolor',
+    image: '/food/pizza/sausage.webp',
+    amount: 16.5,
+  },
+  {
+    id: 'various',
+    name: 'Various Pizza',
+    description: 'Lorem ipsum dolor',
+    image: '/food/pizza/various.webp',
+    amount: 16.5,
+  },
+]
