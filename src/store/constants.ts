@@ -41,4 +41,11 @@ export const MENU_LIST = [
     image: '/food/pizza/various.webp',
     amount: 16.5,
   },
+  {
+    id: 'test',
+    name: 'test',
+    description: 'Lorem ipsum dolor',
+    image: '/food/pizza/various.webp',
+    amount: 16.5,
+  },
 ]

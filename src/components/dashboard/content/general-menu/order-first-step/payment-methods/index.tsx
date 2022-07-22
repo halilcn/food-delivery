@@ -20,8 +20,6 @@ const PaymentMethods: React.FC<IProps> = props => {
     if (basketState.paymentMethods === paymentMethod) return 'payment-methods__item--selected'
   }
 
-  //todo:dynamic class için tek fonkstiyon ?
-
   return (
     <div className="payment-methods">
       <div className="payment-methods__title">Payment Methods</div>

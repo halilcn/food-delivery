@@ -10,7 +10,7 @@ const CreditCard: React.FC<IProps> = props => {
       <div className="credit-card__title">Credit Card</div>
       <div className="credit-card__stored">
         <img className="credit-card__stored-icon" src="/icons/visa.png" />
-        <div className="credit-card__stored-number">**** ***** ***** 1234</div>
+        <div className="credit-card__stored-number">**** **** **** 1234</div>
       </div>
     </div>
   )

@@ -27,7 +27,7 @@ const GeneralMenu: React.FC<IProps> = props => {
     <div className="general-menu">
       {!basketState.orders.length && <EmptyBasket />}
       {!!basketState.orders.length && !isLastStep && (
-        <div className="general-menu__order-menu-first-step">
+        <div className="general-menu__order-menu-step">
           <OrderMenu />
           <TotalAmount />
           <PaymentMethods />
@@ -39,7 +39,7 @@ const GeneralMenu: React.FC<IProps> = props => {
         </div>
       )}
       {!!basketState.orders.length && isLastStep && (
-        <div className="general-menu__order-menu-last-step">
+        <div className="general-menu__order-menu-step">
           <BackFirstStep onClick={toggleLastStep} />
           <TotalAmount />
           <OrderAddress />
