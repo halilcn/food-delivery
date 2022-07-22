@@ -13,24 +13,25 @@ const MenuList: React.FC<IProps> = props => {
   const basketState = useSelector((state: RootState) => state.basket)
   const dispatch = useDispatch()
 
-  const existsInBasket = (menuId: string) => {
+  const findOrder = (menuId: string) => {
     return basketState.orders.find(order => order.id === menuId)
   }
 
-  const addToBasket = (menu: any) => {
-    const { description, ...menuInfoToStore } = menu
+  const addToBasket = (menu: any, piece: number) => {
+    const { description, ...menuInfo } = menu
 
-    if (existsInBasket(menuInfoToStore.id)) {
-      // dispatch(basketReduceActions.a({ ...menuInfoToStore, piece: 1 }))
+    if (findOrder(menuInfo.id)) {
+      dispatch(basketReduceActions.updatePieceOfOrder({ id: menuInfo.id, piece }))
+      return
     }
 
-    dispatch(basketReduceActions.addOrder({ ...menuInfoToStore, piece: 1 }))
+    dispatch(basketReduceActions.addOrder({ ...menuInfo, piece }))
   }
 
   return (
     <div className="menu-list">
-      {MENU_LIST.map(menu => (
-        <div className="menu-list__item">
+      {MENU_LIST.map((menu, key) => (
+        <div key={key} className={`menu-list__item ${findOrder(menu.id) && 'menu-list__item--selected'}`}>
           <img className="menu-list__food-image" src={menu.image} />
           <div className="menu-list__bottom-content">
             <div className="menu-list__food-name">{menu.name}</div>
@@ -38,15 +39,15 @@ const MenuList: React.FC<IProps> = props => {
             <div className="menu-list__amount">${menu.amount}</div>
           </div>
           <div className="menu-list__basket-actions">
-            {!existsInBasket(menu.id) && (
-              <HiOutlinePlusSm onClick={() => addToBasket(menu)} className="menu-list__basket-first-add" />
+            {!findOrder(menu.id) && (
+              <HiOutlinePlusSm onClick={() => addToBasket(menu, 1)} className="menu-list__basket-first-add" />
             )}
 
-            {existsInBasket(menu.id) && (
+            {findOrder(menu.id) && (
               <div className="menu-list__basket-piece-action">
-                <HiMinusSm className="menu-list__basket-piece-action__icon" />
-                <span className="menu-list__basket-piece-action__number">1</span>
-                <HiOutlinePlusSm className="menu-list__basket-piece-action__icon" />
+                <HiMinusSm onClick={() => addToBasket(menu, -1)} className="menu-list__basket-piece-action__icon" />
+                <span className="menu-list__basket-piece-action__number">{findOrder(menu.id)?.piece}</span>
+                <HiOutlinePlusSm onClick={() => addToBasket(menu, 1)} className="menu-list__basket-piece-action__icon" />
               </div>
             )}
           </div>

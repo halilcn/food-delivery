@@ -1,6 +1,8 @@
 import { createSlice } from '@reduxjs/toolkit'
 import type { PayloadAction } from '@reduxjs/toolkit'
 
+import { RootState } from '../index'
+
 interface IPieceAction {
   id: string
   piece: number
@@ -55,6 +57,14 @@ export const basketSlice = createSlice({
     },
   },
 })
+
+export const basketReduceGetters = {
+  totalAmount: (state: RootState) =>
+    state.basket.orders
+      .map(order => order.piece * order.amount)
+      .reduce((a, b) => a + b)
+      .toFixed(2),
+}
 
 export const basketReduceActions = basketSlice.actions
 export default basketSlice.reducer

@@ -1,25 +1,18 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 
-import { RootState } from '../../../../../../store'
+import { basketReduceGetters } from '../../../../../../store/reducers/basket'
 import './TotalAmount.scss'
 
 interface IProps {}
 
 const TotalAmount: React.FC<IProps> = props => {
-  const basketState = useSelector((state: RootState) => state.basket)
-
-  //todo:!
-  const totalBasketAmount = basketState.orders.reduce((a: any, b) => {
-    return a.piece + b.piece
-  })
-  console.log('total basket')
-  console.log(totalBasketAmount)
+  const totalAmount = useSelector(basketReduceGetters.totalAmount)
 
   return (
     <div className="total-amount">
       Total Amount:
-      <span className="total-amount__number">$12</span>
+      <span className="total-amount__number">${totalAmount}</span>
     </div>
   )
 }

@@ -17,7 +17,11 @@
     border: 1px solid transparent;
     transition: 0.2s;
 
-    &:hover {
+    &--selected {
+      border-color: #ffe5b5;
+    }
+
+    &:not(&--selected):hover {
       border-color: #ffedd6;
     }
   }
@@ -86,7 +90,7 @@
   }
 
   &__basket-piece-action__icon {
-    color: #5c5c5c;
+    color: #6d6d6d;
     cursor: pointer;
     font-size: 21px;
 
@@ -98,9 +102,11 @@
   &__basket-piece-action__number {
     display: flex;
     align-items: center;
+    justify-content: center;
     background-color: $normal-orange;
     color: white;
     font-size: 12px;
     padding: 0 8px;
+    width: 27px;
   }
 }
