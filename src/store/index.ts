@@ -1,12 +1,12 @@
 import { configureStore } from '@reduxjs/toolkit'
 
-import user from './reducers/auth'
+import auth from './reducers/auth'
 import basket from './reducers/basket'
 
 export const store = configureStore({
   reducer: {
     basket,
-    user,
+    auth,
   },
 })
 

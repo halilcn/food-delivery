@@ -1,12 +1,24 @@
 import React from 'react'
 import { BiHistory, BiHomeAlt, BiMessageRounded, BiWallet } from 'react-icons/bi'
 import { HiOutlineLogout } from 'react-icons/hi'
+import { useDispatch } from 'react-redux'
+import { useNavigate } from 'react-router-dom'
 
+import router from '../../../router'
+import { authReduceActions } from '../../../store/reducers/auth'
 import './PageMenu.scss'
 
 interface IProps {}
 
 const PagesMenu: React.FC<IProps> = props => {
+  const dispatch = useDispatch()
+  const navigate = useNavigate()
+
+  const logout = () => {
+    dispatch(authReduceActions.deleteUser)
+    navigate(router.login.path)
+  }
+
   return (
     <div className="pages-menu">
       <div className="pages-menu__list">
@@ -23,7 +35,7 @@ const PagesMenu: React.FC<IProps> = props => {
           <BiMessageRounded />
         </div>
       </div>
-      <div className="pages-menu__item pages-menu__logout">
+      <div onClick={logout} className="pages-menu__item pages-menu__logout">
         <HiOutlineLogout />
       </div>
     </div>
