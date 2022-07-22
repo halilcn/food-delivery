@@ -1,0 +1,26 @@
+@import 'src/styles/variables';
+@import 'src/styles/mixins';
+
+.login {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fffaf4;
+
+  &__continue-button {
+    background-color: $normal-orange;
+    color: white;
+    padding: 14px 33px;
+    border-radius: 7px;
+    font-size: 17px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s;
+
+    &:hover {
+      @include center-md-box-shadow;
+      transform: scale(1.05);
+    }
+  }
+}
