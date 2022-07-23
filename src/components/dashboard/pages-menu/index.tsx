@@ -15,7 +15,7 @@ const PagesMenu: React.FC<IProps> = props => {
   const navigate = useNavigate()
 
   const logout = () => {
-    dispatch(authReduceActions.deleteUser)
+    dispatch(authReduceActions.deleteUser())
     navigate(router.login.path)
   }
 

@@ -16,7 +16,6 @@ const initialState: IAuthState = {
   user: localStorage.getItem(LOCAL_STORAGE_USER) ? JSON.parse(localStorage.getItem(LOCAL_STORAGE_USER) || '{}') : null,
 }
 
-//todo:! auth manage problem
 export const authSlice = createSlice({
   initialState,
   name: 'user',
