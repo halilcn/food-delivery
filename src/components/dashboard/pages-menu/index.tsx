@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion'
 import React from 'react'
 import { BiHistory, BiHomeAlt, BiMessageRounded, BiWallet } from 'react-icons/bi'
 import { HiOutlineLogout } from 'react-icons/hi'
@@ -19,21 +20,48 @@ const PagesMenu: React.FC<IProps> = props => {
     navigate(router.login.path)
   }
 
+  const animateProps = {
+    initial: { right: 80, opacity: 0.5 },
+    animate: { right: 0, opacity: 1 },
+    transition: (delay: number = 0) => {
+      return {
+        delay,
+        duration: 0.1,
+      }
+    },
+  }
+
   return (
     <div className="pages-menu">
       <div className="pages-menu__list">
-        <div className="pages-menu__item pages-menu__item--selected">
+        <motion.div
+          className="pages-menu__item pages-menu__item--selected"
+          initial={animateProps.initial}
+          animate={animateProps.animate}
+          transition={animateProps.transition(0.1)}>
           <BiHomeAlt />
-        </div>
-        <div className="pages-menu__item">
+        </motion.div>
+        <motion.div
+          className="pages-menu__item"
+          initial={animateProps.initial}
+          animate={animateProps.animate}
+          transition={animateProps.transition(0.2)}>
           <BiWallet />
-        </div>
-        <div className="pages-menu__item">
+        </motion.div>
+        <motion.div
+          className="pages-menu__item"
+          initial={animateProps.initial}
+          animate={animateProps.animate}
+          transition={animateProps.transition(0.3)}>
           <BiHistory />
-        </div>
-        <div className="pages-menu__item">
+        </motion.div>
+        <motion.div
+          className="pages-menu__item"
+          initial={animateProps.initial}
+          animate={animateProps.animate}
+          transition={animateProps.transition(0.4)}>
           <BiMessageRounded />
-        </div>
+        </motion.div>
       </div>
       <div onClick={logout} className="pages-menu__item pages-menu__logout">
         <HiOutlineLogout />

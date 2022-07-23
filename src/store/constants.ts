@@ -49,3 +49,42 @@ export const MENU_LIST = [
     amount: 16.5,
   },
 ]
+
+export const MENU_CATEGORY = [
+  {
+    image: 'pizza-50.png',
+    text: 'Pizza',
+  },
+  {
+    image: 'beef-50.png',
+    text: 'Beef',
+  },
+  {
+    image: 'cake-50.png',
+    text: 'Sweet',
+  },
+  {
+    image: 'fish-food-50.png',
+    text: 'Fish',
+  },
+  {
+    image: 'hamburger-50.png',
+    text: 'Hamburger',
+  },
+  {
+    image: 'kebab-50.png',
+    text: 'Kebab',
+  },
+  {
+    image: 'salad-50.png',
+    text: 'Salad',
+  },
+  {
+    image: 'vegetables-50.png',
+    text: 'Vegetables',
+  },
+  {
+    image: 'burrito-50.png',
+    text: 'Burrito',
+  },
+]
