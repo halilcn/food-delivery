@@ -1,18 +1,23 @@
+@import 'src/styles/mixins';
+
 .search {
   display: flex;
   align-items: center;
   margin-left: auto;
-  position: relative;
+  position: absolute;
+  right: 0;
+  width: 350px;
 
   &__input-text {
+    width: 100%;
     padding: 17px 40px 17px 17px;
-    width: 350px;
     border: 1px solid white; //#f3f3f3;
     border-radius: 10px;
     font-size: 14px;
     font-weight: 300;
     color: #5e5e5e;
     transition: 0.2s;
+    z-index: 9999;
 
     &::placeholder {
       color: #bbbbbb;
@@ -29,5 +34,23 @@
     font-size: 17px;
     right: 15px;
     color: #bbbbbb;
+  }
+
+  &__result-dropdown {
+    @include center-lg-box-shadow;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    background-color: white;
+    z-index: 999;
+    border-radius: 15px;
+    padding: 20px;
+  }
+
+  &__no-response {
+    font-size: 13px;
+    font-weight: 300;
+    color: #cdcdcd;
   }
 }

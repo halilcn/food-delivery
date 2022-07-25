@@ -6,6 +6,7 @@
   position: sticky;
 
   &__order-menu-step {
+    position: absolute;
     display: flex;
     flex-direction: column;
     height: 100%;

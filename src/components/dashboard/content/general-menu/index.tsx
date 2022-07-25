@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion'
 import React, { useState } from 'react'
 import { useSelector } from 'react-redux'
 
@@ -23,30 +24,38 @@ const GeneralMenu: React.FC<IProps> = props => {
     setIsLastStep(!isLastStep)
   }
 
+  const firstStepAnimateVariants = {
+    initial: { right: 1030 },
+    active: { right: 30 },
+  }
+  const lastStepAnimateVariants = {
+    initial: { right: -330 },
+    active: { right: 0 },
+  }
+
   return (
     <div className="general-menu">
       {!basketState.orders.length && <EmptyBasket />}
-      {!!basketState.orders.length && !isLastStep && (
-        <div className="general-menu__order-menu-step">
-          <OrderMenu />
-          <TotalAmount />
-          <PaymentMethods />
-          <OrderContinueButton
-            disable={basketState.paymentMethods === null}
-            onClick={toggleLastStep}
-            text="Continue to Payment"
-          />
-        </div>
-      )}
-      {!!basketState.orders.length && isLastStep && (
-        <div className="general-menu__order-menu-step">
-          <BackFirstStep onClick={toggleLastStep} />
-          <TotalAmount />
-          <OrderAddress />
-          <CreditCard />
-          <OrderContinueButton text="Pay" />
-        </div>
-      )}
+      <motion.div
+        animate={!!basketState.orders.length && !isLastStep ? 'active' : 'initial'}
+        variants={firstStepAnimateVariants}
+        className="general-menu__order-menu-step">
+        <OrderMenu />
+        <TotalAmount />
+        <PaymentMethods />
+        <OrderContinueButton disable={basketState.paymentMethods === null} onClick={toggleLastStep} text="Continue to Payment" />
+      </motion.div>
+
+      <motion.div
+        animate={!!basketState.orders.length && isLastStep ? 'active' : 'initial'}
+        variants={lastStepAnimateVariants}
+        className="general-menu__order-menu-step">
+        <BackFirstStep onClick={toggleLastStep} />
+        <TotalAmount />
+        <OrderAddress />
+        <CreditCard />
+        <OrderContinueButton text="Pay" />
+      </motion.div>
     </div>
   )
 }

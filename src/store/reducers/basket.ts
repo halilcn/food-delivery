@@ -59,11 +59,14 @@ export const basketSlice = createSlice({
 })
 
 export const basketReduceGetters = {
-  totalAmount: (state: RootState) =>
-    state.basket.orders
+  totalAmount: (state: RootState) => {
+    if (state.basket.orders.length === 0) return 0
+
+    return state.basket.orders
       .map(order => order.piece * order.amount)
       .reduce((a, b) => a + b)
-      .toFixed(2),
+      .toFixed(2)
+  },
 }
 
 export const basketReduceActions = basketSlice.actions

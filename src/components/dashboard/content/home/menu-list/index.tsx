@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion'
 import React from 'react'
 import { HiMinusSm, HiOutlinePlusSm } from 'react-icons/hi'
 import { useDispatch, useSelector } from 'react-redux'
@@ -28,6 +29,11 @@ const MenuList: React.FC<IProps> = props => {
     dispatch(basketReduceActions.addOrder({ ...menuInfo, piece }))
   }
 
+  const actionButtonAnimateProps = {
+    whileHover: { scale: 1.1 },
+    whileTap: { scale: 0.9 },
+  }
+
   return (
     <div className="menu-list">
       {MENU_LIST.map((menu, key) => (
@@ -40,7 +46,12 @@ const MenuList: React.FC<IProps> = props => {
           </div>
           <div className="menu-list__basket-actions">
             {!findOrder(menu.id) && (
-              <HiOutlinePlusSm onClick={() => addToBasket(menu, 1)} className="menu-list__basket-first-add" />
+              <motion.div
+                className="menu-list__basket-action-button"
+                whileHover={actionButtonAnimateProps.whileHover}
+                whileTap={actionButtonAnimateProps.whileTap}>
+                <HiOutlinePlusSm onClick={() => addToBasket(menu, 1)} className="menu-list__basket-first-add" />
+              </motion.div>
             )}
 
             {findOrder(menu.id) && (
