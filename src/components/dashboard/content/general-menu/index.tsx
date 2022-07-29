@@ -25,21 +25,34 @@ const GeneralMenu: React.FC<IProps> = props => {
   }
 
   const firstStepAnimateVariants = {
-    initial: { right: 1030 },
-    active: { right: 30 },
-  }
-  const lastStepAnimateVariants = {
-    initial: { right: -330 },
+    initial: { right: '100%' },
     active: { right: 0 },
+  }
+
+  const lastStepAnimateVariants = {
+    initial: { right: '-100%' },
+    active: { right: 0 },
+  }
+
+  const emptyBasketAnimateVariants = {
+    initial: { opacity: 0 },
+    active: { opacity: 1 },
   }
 
   return (
     <div className="general-menu">
-      {!basketState.orders.length && <EmptyBasket />}
+      {!basketState.orders.length && (
+        <motion.div
+          animate={!basketState.orders.length ? 'active' : 'initial'}
+          variants={emptyBasketAnimateVariants}
+          className="general-menu__order-menu-step">
+          <EmptyBasket />
+        </motion.div>
+      )}
       <motion.div
         animate={!!basketState.orders.length && !isLastStep ? 'active' : 'initial'}
         variants={firstStepAnimateVariants}
-        className="general-menu__order-menu-step">
+        className="general-menu__order-menu-step general-menu__order-menu-step--first">
         <OrderMenu />
         <TotalAmount />
         <PaymentMethods />
@@ -49,7 +62,7 @@ const GeneralMenu: React.FC<IProps> = props => {
       <motion.div
         animate={!!basketState.orders.length && isLastStep ? 'active' : 'initial'}
         variants={lastStepAnimateVariants}
-        className="general-menu__order-menu-step">
+        className="general-menu__order-menu-step general-menu__order-menu-step--last">
         <BackFirstStep onClick={toggleLastStep} />
         <TotalAmount />
         <OrderAddress />
