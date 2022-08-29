@@ -8,7 +8,7 @@ export const MENU_LIST = [
   },
   {
     id: 'a-lot-of-material',
-    name: 'Bol Malzemeli Pizza',
+    name: 'Plenty of Ingredients Pizza',
     description: 'Lorem ipsum dolor',
     image: '/food/pizza/a-lot-of-material.webp',
     amount: 20,
@@ -37,13 +37,6 @@ export const MENU_LIST = [
   {
     id: 'various',
     name: 'Various Pizza',
-    description: 'Lorem ipsum dolor',
-    image: '/food/pizza/various.webp',
-    amount: 16.5,
-  },
-  {
-    id: 'test',
-    name: 'test',
     description: 'Lorem ipsum dolor',
     image: '/food/pizza/various.webp',
     amount: 16.5,
